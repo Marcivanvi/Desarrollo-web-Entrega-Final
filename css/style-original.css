@@ -1,0 +1,239 @@
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header-nav {
+    background-color: rgba(255, 255, 255, 0.845);
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+    gap: 100px;
+    position: sticky;
+    width: 100%;
+    height: 75%;
+}
+
+.navbar{
+    text-decoration: black;
+    list-style: none;
+    gap: 1.25rem;
+}
+.navbar li a{
+    text-decoration: black;
+    font-size: 20px;
+    text-shadow: black;
+}
+
+.envios-hasta {
+    background-color: rgba(128, 128, 128, 0.271);
+    font-size: 25px;
+    display: flex;
+    justify-content: space-around;
+    height: 25%
+}
+
+body {
+    /* background-image: url("../assets/img/fond-principal-definitivo.jpg"); */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+}
+.section-cards {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.cards {
+    top: 100px;
+    width: 300px;
+    height: 350px;
+    border: 2px solid rgb(100, 100, 100);
+    border-style: double;
+    border-width: 6px;
+    border-radius: 10px;
+    margin: 25px;
+    overflow: hidden;
+    position: relative;
+
+}
+
+.cards h2 {
+    text-decoration: aqua;
+    font-size: 30px;
+    padding: 20px;
+    padding-top: 50%;
+    padding-right: 20px;
+    padding-left: 20px;
+    text-align: center;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    text-decoration: none;
+}
+
+.cards .clase-img {
+    width: 10px;
+    height: 10px;
+    right: 10px;
+    bottom: 10px;
+    object-fit: contain;
+}
+h1{
+    font-size: 30px;
+    text-decoration-color: rgb(15, 15, 15);
+    text-shadow: 5px 5px 5px black;
+}
+.titulo-deco{
+    text-decoration: white;
+    text-decoration-line: none;
+
+}
+/* .titulo-deco:hover{
+    font-size: 24px;
+    text-shadow: 5px 5px 5px rgb(249, 249, 249);
+} */
+
+/* GRID PRODUCTOS */
+.grid-mesas {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 25% 25% 25%;
+    grid-template-rows: repeat(2, 200px);
+    grid-template-areas:
+        "box1 box2 box3"
+        "box4 box5 box6"
+    ;
+    justify-content: center;
+    gap: 100px;
+}
+
+.box1-mesas {
+    width: 100%;
+
+}
+
+.mesa-article {
+    margin: 20x;
+    object-fit: contain;
+}
+
+.mesa-img {
+    object-fit: cover;
+    width: 100%;
+    height: 50%;
+    border-style: double;
+    border-radius: 5px;
+    border-width: 2px;
+    border-color: rgb(6, 6, 6);
+}
+
+.grid-mesas .box1-mesas {
+    display: grid;
+}
+h3{
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 0%;
+    font-size: 35px;
+    text-decoration: rgb(250, 250, 250);
+    text-align: center;
+}
+h3:hover{
+    text-shadow: 5px 5px 5px white;
+}
+
+@media (max-width: 1024px){
+    .header-nav{
+        background-color: none;
+        justify-content: space-around;
+        justify-self: center;
+    }
+    .navbar{
+        color: black;
+    }
+    .navbar li a:hover{
+        color: white;
+    }
+}
+@media(max-width:768px){
+    .header-nav{
+        background-color: none;
+        flex-direction: column;
+        gap: 10px;
+    }
+    h1{
+        justify-content: center;
+    }
+
+    .grid-mesas{
+        grid-template-columns: repeat(2, 50%);
+        grid-template-rows: repeat(2, 200px);
+        grid-template-areas: 
+        "box1 box2"
+        "box3 box4"
+        "box5 box6";
+    }        
+}
+@media(max-width:425px){
+    .header-nav{
+        font-size: 10px;
+        background-color: none;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .section-cards {
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    .navbar{
+        flex-direction: column;
+    }
+    .section-principal{
+        flex-direction: column;
+    }
+    .envios-hasta{
+        flex-direction: column;
+    }
+
+    .grid-mesas{
+        grid-template-columns: repeat(2, 50%);
+        grid-template-rows: repeat(2, 100px);
+        grid-template-areas: 
+        "box1 box2"
+        "box3 box4"
+        "box5 box6";
+    }        
+}
+@media(max-width:375px){
+    .grid-mesas{
+        grid-template-columns: repeat(1, 50%);
+        grid-template-rows: repeat(6, 100px);
+        grid-template-areas: 
+        "box1"
+        "box2"
+        "box3"
+        "box4"
+        "box5"
+        "box6";
+    }        
+}
+@media(max-width:320px){
+    .grid-mesas{
+        grid-template-columns: repeat(1, 50%);
+        grid-template-rows: repeat(6, 100px);
+        grid-template-areas: 
+        "box1"
+        "box2"
+        "box3"
+        "box4"
+        "box5"
+        "box6";
+    }
+}
