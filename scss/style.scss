@@ -5,40 +5,18 @@
 }
 
 .navbar {
-    background-color: #000000; 
-    background: -webkit-linear-gradient (to right, #434343, #000000); 
-    background: linear-gradient(to right, #434343, #000000);     
+    background: linear-gradient(to right, #434343, #ffffff);
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 15px;
-    color: #14dce7; /* Color del texto en el navbar */
     font-family: 'Diphylleia', serif;
-    .logo {
-        font-size: 30px;
-        font-weight: bold;
-        font-family: 'Diphylleia', serif;
-        justify-content: center;
-    }
-    .home{
-        font-size: 20px;
-        font-family: 'Alex Brush', cursive;
-    }
-    .nav-links li {
-        display: inline-block;
-        margin-left: 20px;
-    }
-    .nav-links li a {
-        text-decoration: none;
-        color: #14dce7; /* Color de los enlaces del navbar */
-        transition: color 0.3s ease;
-    }
-    .nav-links li a:hover {
-        color: white; /* Color del enlace al pasar el mouse por encima */
-        text-shadow: 5px 5px 5px;
-    }
-    
 }
+    .home {
+        font-size: 30px;
+        font-family: 'Alex Brush', cursive;
+        color: #f0b113
+    }
 .envios-hasta {
     background-color: rgba(128, 128, 128, 0.126);
     font-size: 25px;
@@ -50,83 +28,147 @@
 
 /* Estilos generales del footer */
 footer {
-    background-color: #000000; 
-    background: -webkit-linear-gradient (to right, #434343, #000000); 
-    background: linear-gradient(to right, #434343, #000000); 
-    color: #fff; /* Color del texto en el footer */
+    background-color: #000000;
+    background: -webkit-linear-gradient (to right, #434343, #000000);
+    background: linear-gradient(to right, #434343, #000000);
+    color: #fff;
+    /* Color del texto en el footer */
+    padding: 40px 0;
+}
+
+/* Estilos generales del footer */
+footer {
+    background-color: #333;
+    /* Color de fondo del footer */
+    color: #fff;
+    /* Color del texto en el footer */
     padding: 40px 0;
 }
 
 .footer-container {
-    display: flex;
-    justify-content: space-between;
     max-width: 1200px;
     margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Estilos para cada columna del footer */
+.footer-column {
+    flex: 1;
     padding: 0 20px;
+    margin-bottom: 20px;
+    color: #f0b113;
 }
 
-/* Estilos para la columna izquierda del footer */
-.footer-izq {
-    flex: 1;
-}
-
-.footer-izq h3 {
+.footer-column h3 {
     font-size: 20px;
     margin-bottom: 20px;
 }
 
-.footer-izq p {
-    font-size: 16px;
+.footer-column ul li {
     margin-bottom: 10px;
 }
 
-/* Estilos para la columna derecha del footer */
-.footer-der {
-    flex: 1;
-}
-
-.footer-der h3 {
-    font-size: 20px;
-    margin-bottom: 20px;
-}
-
-.footer-der ul li {
-    margin-bottom: 10px;
-}
-
-.footer-der ul li a {
+.footer-column ul li a {
     text-decoration: none;
-    color: #fff;
+    color: #f0b113;
     font-size: 16px;
 }
 
 /* Estilos para el fondo del footer */
-.footer-abajo {
-    background-color: #000000; 
-    background: -webkit-linear-gradient (to right, #434343, #000000); 
-    background: linear-gradient(to right, #434343, #000000);  
+.footer-bottom {
+    background-color: #222;
+    /* Color de fondo del fondo del footer */
     text-align: center;
     padding: 10px 0;
 }
 
-.footer-abajo p {
+.footer-bottom p {
     color: #fff;
     font-size: 14px;
 }
-.image-grid {
+
+/* Estilos del grid */
+.image-grid-prod {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Crea 3 columnas de tamaño igual */
-    grid-gap: 16px; /* Espacio entre las imágenes */
-    max-width: 1200px; /* Ancho máximo del grid */
-    margin: 20px auto; /* Centrar el grid en la página */
+    grid-template-columns: repeat(3, 1fr);
+    /* Crea 3 columnas de tamaño igual */
+    grid-gap: 20px;
+    /* Espacio entre las imágenes */
+    max-width: 1000px;
+    /* Ancho máximo del grid */
+    margin: auto;
+    /* Centrar el grid en la página */
 }
 
 /* Estilos para las imágenes */
-.image-grid img {
+.image-grid-prod img {
     width: 100%;
     height: auto;
-    display: block;
+    display: flex;
 }
+
+/* Estilos para los enlaces */
+.image-grid-prod a {
+    display: block;
+    text-decoration: none;
+    color: #333;
+    /* Color del texto del enlace */
+    text-align: center;
+    padding: 10px;
+    border: 2px solid #ccc;
+    /* Borde alrededor de cada enlace */
+    border-radius: 8px;
+    /* Bordes redondeados */
+    transition: transform 0.3s ease;
+    /* Transición para efecto al pasar el mouse */
+}
+
+.image-grid-prod a:hover {
+    transform: scale(1.05);
+    /* Efecto de escala al pasar el mouse por encima del enlace */
+}
+
+.image-grid-carr {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* Crea 3 columnas de tamaño igual */
+    grid-gap: 20px;
+    /* Espacio entre las imágenes */
+    max-width: 1000px;
+    /* Ancho máximo del grid */
+    margin: auto;
+    /* Centrar el grid en la página */
+}
+
+/* Estilos para las imágenes */
+.image-grid-carr img {
+    width: 100%;
+    height: 50%;
+    display: flex;
+}
+
+/* Estilos para los enlaces */
+.image-grid-carr a {
+    display: block;
+    text-decoration: none;
+    color: #333;
+    /* Color del texto del enlace */
+    text-align: center;
+    padding: 10px;
+    border: 2px solid #ccc;
+    /* Borde alrededor de cada enlace */
+    border-radius: 8px;
+    /* Bordes redondeados */
+    transition: transform 0.3s ease;
+    /* Transición para efecto al pasar el mouse */
+}
+
+.image-grid-carr a:hover {
+    transform: scale(1.05);
+    /* Efecto de escala al pasar el mouse por encima del enlace */
+}
+
 /* Estilos del contenedor de las cards */
 .card-container {
     display: flex;
@@ -137,20 +179,43 @@ footer {
     margin: 20px auto;
 }
 
+
 /* Estilos de la card */
 .card {
     width: 300px;
-    background-color: #f0f0f0; /* Color de fondo de la card */
+    background-color: #f0f0f0;
+    /* Color de fondo de la card */
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin: 40px;
+    margin: 10px;
+    position: relative;
+    box-sizing: border-box;
+    width: 11.875rem;
+    height: 11.875rem;
+    background-color: rgb(0, 0, 0);
+    border: 1px solid white;
+    box-shadow: 12px 17px 51px rgb(3, 3, 3);
+    backdrop-filter: blur(6px);
+    border-radius: 16px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    font-weight: bolder;
+    color: rgb(247, 247, 247);
+    margin: auto;
 }
 
 .card a {
     display: block;
     text-align: center;
-    color: #333; /* Color del texto del enlace */
+    color: #f0b113;
+    text-shadow: 5px 5px 5px black;
+    /* Color del texto del enlace */
     text-decoration: none;
 }
 
@@ -162,6 +227,20 @@ footer {
 
 .card-content {
     padding: 20px;
+    opacity: 0;
+    /* Inicialmente, el contenido estará oculto */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* Centrar el contenido vertical y horizontalmente */
+    transition: opacity 0.3s ease;
+    /* Transición de opacidad */
+}
+
+.card:hover .card-content {
+    opacity: 1;
+    /* Mostrar el contenido al pasar el mouse por encima de la card */
 }
 
 .card-content h2 {
@@ -171,5 +250,113 @@ footer {
 
 .card-content p {
     font-size: 16px;
-    color: #666; /* Color del texto de la descripción */
+    color: #000000;
+    /* Color del texto de la descripción */
+}
+
+.card:hover {
+    border-radius: 1px solid rgb(30, 0, 255);
+    transform: scale(1.05);
+}
+
+.card:hover:active {
+    transform: scale(0.95) rotate(1.7deg);
+}
+
+h2 {
+    text-align: center;
+    font-family: 'Diphylleia', serif;
+    text-shadow: 5px 5px 5px black;
+}
+
+.styled-button {
+    background-color: #007bff;
+    /* Color de fondo del botón */
+    color: #fff;
+    /* Color del texto del botón */
+    padding: 10px 20px;
+    /* Espaciado interno del botón */
+    border: none;
+    /* Elimina el borde del botón */
+    border-radius: 4px;
+    /* Bordes redondeados */
+    cursor: pointer;
+    /* Cambia el cursor al pasar el mouse sobre el botón */
+}
+
+/* Estilo al pasar el mouse por encima del botón */
+.styled-button:hover {
+    background-color: #0056b3;
+}
+
+.redes {
+    list-style: none;
+    color: #f0b113;
+    text-decoration: none;
+}
+
+@media(max-width:1024px) {
+    .navbar {
+        background: linear-gradient(to right, #434343, #ffffff);
+        justify-content: space-around;
+        justify-self: center;
+    }
+}
+
+@media(max-width:768px) {
+    .navbar {
+        background: linear-gradient(to right, #434343, #ffffff);
+        justify-content: space-around;
+        justify-self: center;
+    }
+    .envios-hasta{
+        flex-direction: row ;
+    }
+    .card{
+        flex-direction: column;
+    }
+}
+
+@media(max-width:425px) {
+    .navbar {
+        background: linear-gradient(to right, #434343, #ffffff);
+        flex-direction: column;
+        gap: .625rem;
+    }
+    // header{
+    //     flex-direction: column;
+    // }
+    .envios-hasta{
+        font-size: 16px;
+    }
+    .card-container{
+        flex-direction: row;
+    }
+    .footer-container{
+        flex-direction: column;
+    }
+    .image-grid-carr{
+        grid-template-columns:repeat(2,1fr);
+        grid-template-rows: auto;
+    }
+}
+
+@media(max-width:375px) {
+    .navbar {
+        flex-direction: column;
+    }
+}
+
+@media(max-width:320px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .envios-hasta {
+        font-size: 14px;
+    }
+    .image-grid-prod{
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: auto;
+    }
 }
