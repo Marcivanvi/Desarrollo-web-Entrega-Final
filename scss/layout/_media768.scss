@@ -1,0 +1,16 @@
+@media(max-width:768px) {
+    .navbar {
+        background: linear-gradient(to right, #434343, #ffffff);
+        justify-content: space-around;
+        justify-self: center;
+    }
+
+    .envios-hasta {
+        text-align: center;
+        font-size: 20px;
+    }
+
+    .card {
+        flex-direction: column;
+    }
+}

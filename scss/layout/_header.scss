@@ -1,0 +1,7 @@
+.navbar {
+    background: $background-principal;
+    @include flex;
+    align-items: center;
+    gap: 15px;
+    font-family: 'Diphylleia', serif;
+}

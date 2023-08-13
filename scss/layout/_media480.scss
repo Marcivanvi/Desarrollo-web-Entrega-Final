@@ -1,0 +1,25 @@
+@media(max-width:480px) {
+    .navbar {
+        background: linear-gradient(to right, #434343, #ffffff);
+        flex-direction: column;
+        gap: .625rem;
+    }
+
+
+    .envios-hasta {
+        font-size: 16px;
+    }
+
+    .card-container {
+        flex-direction: row;
+    }
+
+    .footer-container {
+        flex-direction: column;
+    }
+
+    .image-grid-carr {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+    }
+}
